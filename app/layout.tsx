@@ -9,7 +9,7 @@ const nunito = Nunito({
 })
 
 export const metadata: Metadata = {
-  title: 'Bancolombia App',
+  title: 'Mi Bancolombia',
   description: 'App personal Bancolombia',
   generator: 'v0.app',
 }
@@ -28,6 +28,11 @@ export default function RootLayout({
     <html lang="es" className={`dark ${nunito.variable}`}>
       <head>
         <link href="/bancolombia.png" rel="icon" sizes="250x250" type="image/png" />
+        <link
+          rel="apple-touch-icon"
+          href="/bancolombia.png"
+          sizes="180x180"
+        />
       </head>
       <body className="bg-background font-sans antialiased">
         {children}
