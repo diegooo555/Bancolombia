@@ -1,6 +1,46 @@
+"use client"
+
+import { useState, useEffect, useCallback } from "react"
 import { Lock, ChevronRight } from "lucide-react"
 
-export function ClaveDinamica({ code = "509 045" }: { code?: string }) {
+function generateRandomCode(): string {
+  const digits = Math.floor(100000 + Math.random() * 900000).toString()
+  return `${digits.slice(0, 3)} ${digits.slice(3)}`
+}
+
+export function ClaveDinamica({ code: initialCode = "--- ---", interval = 60 }: { code?: string; interval?: number }) {
+  const circumference = 2 * Math.PI * 19
+  const [code, setCode] = useState(initialCode)
+  const [progress, setProgress] = useState(0)
+
+  useEffect(() => {
+    setCode(generateRandomCode())
+  }, [])
+
+  const reset = useCallback(() => {
+    setCode(generateRandomCode())
+    setProgress(0)
+  }, [])
+
+  useEffect(() => {
+    const tick = 100
+    const totalMs = interval * 1000
+
+    const id = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= totalMs) {
+          reset()
+          return 0
+        }
+        return prev + tick
+      })
+    }, tick)
+
+    return () => clearInterval(id)
+  }, [interval, reset])
+
+  const offset = circumference - (progress / (interval * 1000)) * circumference
+
   return (
     <button
       type="button"
@@ -17,8 +57,9 @@ export function ClaveDinamica({ code = "509 045" }: { code?: string }) {
             stroke="var(--primary)"
             strokeWidth="3"
             strokeLinecap="round"
-            strokeDasharray="119"
-            strokeDashoffset="45"
+            strokeDasharray={circumference}
+            strokeDashoffset={offset}
+            style={{ transition: "stroke-dashoffset 0.1s linear" }}
           />
         </svg>
         <Lock className="h-5 w-5 text-foreground" />

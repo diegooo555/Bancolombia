@@ -49,7 +49,6 @@ export function ScreenClave({
 
   return (
     <div className="flex min-h-full flex-col">
-      <StatusBar time="10:11" />
 
       <div className="relative flex-1 overflow-hidden">
         {/* small side accents */}
@@ -97,9 +96,8 @@ export function ScreenClave({
                   inputMode="numeric"
                   maxLength={1}
                   aria-label={`Dígito ${i + 1}`}
-                  className={`h-16 w-16 rounded-[18px] border-2 bg-transparent text-center text-3xl text-foreground outline-none ${
-                    error ? "border-destructive" : "border-muted-foreground/50 focus:border-primary"
-                  }`}
+                  className={`h-16 w-16 rounded-[18px] border-2 bg-transparent text-center text-3xl text-foreground outline-none ${error ? "border-destructive" : "border-muted-foreground/50 focus:border-primary"
+                    }`}
                 />
               ))}
             </div>
@@ -116,9 +114,8 @@ export function ScreenClave({
             type="button"
             onClick={submit}
             disabled={!filled}
-            className={`w-full rounded-full py-4 text-xl font-bold transition-colors ${
-              filled ? "bg-primary text-primary-foreground" : "bg-muted-foreground/40 text-neutral-300"
-            }`}
+            className={`w-full rounded-full py-4 text-xl font-bold transition-colors ${filled ? "bg-primary text-primary-foreground" : "bg-muted-foreground/40 text-neutral-300"
+              }`}
           >
             Ingresar
           </button>

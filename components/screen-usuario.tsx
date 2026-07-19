@@ -19,7 +19,6 @@ export function ScreenUsuario({
 
   return (
     <div className="flex min-h-full flex-col">
-      <StatusBar time="10:10" />
 
       <div className="relative flex-1 overflow-hidden">
         <LoginRibbons />
@@ -65,9 +64,8 @@ export function ScreenUsuario({
             type="button"
             onClick={() => canContinue && onContinue()}
             disabled={!canContinue}
-            className={`w-full rounded-full py-4 text-xl font-bold transition-colors ${
-              canContinue ? "bg-primary text-primary-foreground" : "bg-muted-foreground/40 text-neutral-300"
-            }`}
+            className={`w-full rounded-full py-4 text-xl font-bold transition-colors ${canContinue ? "bg-primary text-primary-foreground" : "bg-muted-foreground/40 text-neutral-300"
+              }`}
           >
             Continuar
           </button>

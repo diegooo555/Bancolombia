@@ -1,3 +1,5 @@
+"use client"
+
 import { Home, CreditCard, LayoutGrid, FileText, Settings } from "lucide-react"
 
 const items = [
@@ -8,18 +10,25 @@ const items = [
   { icon: Settings, label: "Ajustes" },
 ]
 
-export function BottomNav() {
+export function BottomNav({
+  active = "Inicio",
+  onSelect,
+}: {
+  active?: string
+  onSelect?: (tab: string) => void
+}) {
   return (
     <nav className="flex items-stretch border-t border-border bg-background">
-      {items.map((item, i) => {
-        const active = i === 0
+      {items.map((item) => {
+        const isActive = item.label === active
         const Icon = item.icon
         return (
           <button
             key={item.label}
             type="button"
+            onClick={() => onSelect?.(item.label)}
             className={`flex flex-1 flex-col items-center justify-center gap-1 py-3 text-center ${
-              active ? "bg-primary text-primary-foreground" : "text-foreground"
+              isActive ? "bg-primary text-primary-foreground" : "text-foreground"
             }`}
           >
             <Icon className="h-6 w-6" strokeWidth={1.6} />

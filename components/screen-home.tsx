@@ -23,10 +23,17 @@ const opciones = [
   { icon: FileText, label: "Trámites y", color: "#7fd4e8" },
 ]
 
-export function ScreenHome({ onLogin }: { onLogin: () => void }) {
+export function ScreenHome({
+  onLogin,
+  navTab = "Inicio",
+  onNavSelect,
+}: {
+  onLogin: () => void
+  navTab?: string
+  onNavSelect?: (tab: string) => void
+}) {
   return (
     <div className="flex min-h-full flex-col">
-      <StatusBar time="10:10" />
 
       <div className="relative flex-1 overflow-hidden">
         <HomeRibbons />
@@ -110,7 +117,7 @@ export function ScreenHome({ onLogin }: { onLogin: () => void }) {
         </button>
       </div>
 
-      <BottomNav />
+      <BottomNav active={navTab} onSelect={onNavSelect} />
     </div>
   )
 }

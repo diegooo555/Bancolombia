@@ -19,7 +19,7 @@ export function ScreenCuenta({ onBack }: { onBack: () => void }) {
 
   return (
     <div className="flex min-h-full flex-col">
-      <StatusBar time="10:12" />
+
 
       {/* header block */}
       <div className="bg-card/60">
@@ -59,9 +59,8 @@ export function ScreenCuenta({ onBack }: { onBack: () => void }) {
                 key={t}
                 type="button"
                 onClick={() => setActive(t)}
-                className={`flex-1 border-b-2 pb-3 text-center text-lg transition-colors ${
-                  isActive ? "border-foreground font-bold text-foreground" : "border-transparent text-muted-foreground"
-                }`}
+                className={`flex-1 border-b-2 pb-3 text-center text-lg transition-colors ${isActive ? "border-foreground font-bold text-foreground" : "border-transparent text-muted-foreground"
+                  }`}
               >
                 {t}
               </button>

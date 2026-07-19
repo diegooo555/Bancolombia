@@ -17,14 +17,16 @@ const transacciones = [
 export function ScreenDashboard({
   onCuenta,
   onLogout,
+  navTab = "Inicio",
+  onNavSelect,
 }: {
   onCuenta: () => void
   onLogout: () => void
+  navTab?: string
+  onNavSelect?: (tab: string) => void
 }) {
   return (
     <div className="flex min-h-full flex-col">
-      <StatusBar time="10:12" />
-
       <div className="relative flex-1 overflow-hidden">
         <DashboardRibbons />
 
@@ -63,7 +65,7 @@ export function ScreenDashboard({
 
           <div className="mt-4 flex gap-3 overflow-hidden">
             <div className="w-[88%] shrink-0 rounded-2xl bg-card p-5">
-              <div className="flex items-start justify-between">
+              <div className="flex items-start justify-between" onClick={onCuenta}>
                 <div>
                   <h3 className="text-2xl font-bold text-foreground">Cuenta de Ahorros</h3>
                   <p className="mt-1 text-muted-foreground">Ahorros 912 - 846779 - 57</p>
@@ -131,7 +133,7 @@ export function ScreenDashboard({
         </button>
       </div>
 
-      <BottomNav />
+      <BottomNav active={navTab} onSelect={onNavSelect} />
     </div>
   )
 }
