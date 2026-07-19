@@ -26,6 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`dark ${nunito.variable}`}>
+      <head>
+        <link href="/bancolombia.png" rel="icon" sizes="250x250" type="image/png" />
+      </head>
       <body className="bg-background font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
