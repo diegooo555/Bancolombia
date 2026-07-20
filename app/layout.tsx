@@ -27,10 +27,10 @@ export default function RootLayout({
   return (
     <html lang="es" className={`dark ${nunito.variable}`}>
       <head>
-        <link href="/bancolombia.png" rel="icon" sizes="250x250" type="image/png" />
+        <link href="/icon.svg" rel="icon" sizes="250x250" type="image/svg" />
         <link
           rel="apple-touch-icon"
-          href="/bancolombia.png"
+          href="/icon.svg"
           sizes="180x180"
         />
       </head>
