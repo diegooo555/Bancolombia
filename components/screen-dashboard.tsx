@@ -75,7 +75,7 @@ export function ScreenDashboard({
               <div className="mt-4 text-right">
                 <p className="text-muted-foreground">Saldo disponible</p>
                 <p className="text-3xl font-light text-foreground">
-                  $ 1.686.263<span className="text-xl">,73</span>
+                  $ 543.063<span className="text-xl">,73</span>
                 </p>
               </div>
               <button

@@ -8,6 +8,7 @@ import { BancolombiaMark } from "./bancolombia-logo"
 const tabs = ["Detalles", "Movimientos", "Plan"]
 
 const movimientos = [
+  { fecha: "23 JUL 2026", desc: "TRANSFERENCIA CTA SUC VIRTUAL", monto: "-$ 1.143.200", cents: ",00", ingreso: false },
   { fecha: "22 JUL 2026", desc: "RETIRO SUCURSAL", monto: "-$ 451.000", cents: ",00", ingreso: false },
   { fecha: "22 JUL 2026", desc: "IMPTO GOBIERNO 4x1000", monto: "-$ 1922", cents: ",00", ingreso: false },
   { fecha: "21 JUL 2026", desc: "TRANSFERENCIA CTA SUC VIRTUAL", monto: "-$ 525.000", cents: ",00", ingreso: false },
@@ -62,7 +63,7 @@ export function ScreenCuenta({ onBack }: { onBack: () => void }) {
             <div className="text-right">
               <p className="text-muted-foreground">Saldo disponible</p>
               <p className="text-3xl font-light text-foreground">
-                $ 1.686.263<span className="text-xl">,73</span>
+                $ 543.063<span className="text-xl">,73</span>
               </p>
             </div>
           </div>
@@ -123,7 +124,7 @@ export function ScreenCuenta({ onBack }: { onBack: () => void }) {
             <Detail label="Número de cuenta" value="912 - 846779 - 57" />
             <Detail label="Titular" value="Maradona" />
             <Detail label="Estado" value="Activa" />
-            <Detail label="Saldo total" value="$ 1.686.263,73" />
+            <Detail label="Saldo total" value="$ 543.063,73" />
           </div>
         )}
 
