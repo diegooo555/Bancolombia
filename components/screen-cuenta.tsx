@@ -9,8 +9,11 @@ const tabs = ["Detalles", "Movimientos", "Plan"]
 
 const movimientos = [
   { fecha: "22 JUL 2026", desc: "RETIRO SUCURSAL", monto: "-$ 451.000", cents: ",00", ingreso: false },
+  { fecha: "22 JUL 2026", desc: "IMPTO GOBIERNO 4x1000", monto: "-$ 1922", cents: ",00", ingreso: false },
   { fecha: "21 JUL 2026", desc: "TRANSFERENCIA CTA SUC VIRTUAL", monto: "-$ 525.000", cents: ",00", ingreso: false },
-  { fecha: "21 JUL 2026", desc: "PAGO DE PROV SABANALAC SAS", monto: "+$ 2.587.480", cents: ",73", ingreso: true },
+  { fecha: "21 JUL 2026", desc: "GOOGLE ONE", monto: "-$ 11.000", cents: ",00", ingreso: false },
+  { fecha: "21 JUL 2026", desc: "PAGO DE PROV SABANALAC SAS", monto: "+$ 68.783", cents: ",00", ingreso: true },
+  { fecha: "21 JUL 2026", desc: "PAGO DE PROV SABANALAC SAS", monto: "+$ 2.604.480", cents: ",73", ingreso: true },
   { fecha: "15 JUL 2026", desc: "TRANSF A COMUNICACION CELULA", monto: "-$ 35.601", cents: ",00" },
   { fecha: "15 JUL 2026", desc: "PAGO QR PYU CORREDOR", monto: "-$ 50.000", cents: ",00" },
   { fecha: "12 JUL 2026", desc: "TRANSFERENCIA NEQUI", monto: "+$ 18.000", cents: ",00", ingreso: true },
@@ -59,7 +62,7 @@ export function ScreenCuenta({ onBack }: { onBack: () => void }) {
             <div className="text-right">
               <p className="text-muted-foreground">Saldo disponible</p>
               <p className="text-3xl font-light text-foreground">
-                $ 3.260<span className="text-xl">,56</span>
+                $ 1.686.263<span className="text-xl">,73</span>
               </p>
             </div>
           </div>
@@ -120,7 +123,7 @@ export function ScreenCuenta({ onBack }: { onBack: () => void }) {
             <Detail label="Número de cuenta" value="912 - 846779 - 57" />
             <Detail label="Titular" value="Maradona" />
             <Detail label="Estado" value="Activa" />
-            <Detail label="Saldo total" value="$ 3.260,56" />
+            <Detail label="Saldo total" value="$ 1.686.263,73" />
           </div>
         )}
 

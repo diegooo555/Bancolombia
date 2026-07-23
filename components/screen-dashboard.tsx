@@ -8,7 +8,7 @@ import { BottomNav } from "./bottom-nav"
 import { DashboardRibbons } from "./ribbons"
 
 const transacciones = [
-  { icon: FileText, label: "Ver saldos y\nmovimientos" },
+  { icon: FileText, label: "Ver movimientos" },
   { label: "Tus\nllaves", breb: true },
   { icon: Send, label: "Transferir\nplata" },
   { icon: CreditCard, label: "Pagar tarjetas\ny créditos" },
@@ -75,7 +75,7 @@ export function ScreenDashboard({
               <div className="mt-4 text-right">
                 <p className="text-muted-foreground">Saldo disponible</p>
                 <p className="text-3xl font-light text-foreground">
-                  $ 3.260<span className="text-xl">,56</span>
+                  $ 1.686.263<span className="text-xl">,73</span>
                 </p>
               </div>
               <button
