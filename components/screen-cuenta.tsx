@@ -8,10 +8,25 @@ import { BancolombiaMark } from "./bancolombia-logo"
 const tabs = ["Detalles", "Movimientos", "Plan"]
 
 const movimientos = [
+  { fecha: "22 JUL 2026", desc: "RETIRO SUCURSAL", monto: "-$ 451.000", cents: ",00", ingreso: false },
+  { fecha: "21 JUL 2026", desc: "TRANSFERENCIA CTA SUC VIRTUAL", monto: "-$ 525.000", cents: ",00", ingreso: false },
+  { fecha: "21 JUL 2026", desc: "PAGO DE PROV SABANALAC SAS", monto: "+$ 2.587.480", cents: ",73", ingreso: true },
   { fecha: "15 JUL 2026", desc: "TRANSF A COMUNICACION CELULA", monto: "-$ 35.601", cents: ",00" },
   { fecha: "15 JUL 2026", desc: "PAGO QR PYU CORREDOR", monto: "-$ 50.000", cents: ",00" },
-  { fecha: "14 JUL 2026", desc: "COMPRA EXITO CALLE 80", monto: "-$ 128.450", cents: ",00" },
-  { fecha: "12 JUL 2026", desc: "ABONO NOMINA EMPRESA SAS", monto: "+$ 1.850.000", cents: ",00", ingreso: true },
+  { fecha: "12 JUL 2026", desc: "TRANSFERENCIA NEQUI", monto: "+$ 18.000", cents: ",00", ingreso: true },
+  { fecha: "11 JUL 2026", desc: "PAGO QR TIENDA", monto: "-$ 5.000", cents: ",00", ingreso: false },
+  { fecha: "11 JUL 2026", desc: "TRANSFERENCIA NEQUI", monto: "+$ 10.000", cents: ",00", ingreso: true },
+  { fecha: "10 JUL 2026", desc: "COMPRA CAFETERIA", monto: "-$ 7.500", cents: ",00", ingreso: false },
+  { fecha: "10 JUL 2026", desc: "DEVOLUCION PSE", monto: "+$ 12.000", cents: ",00", ingreso: true },
+  { fecha: "09 JUL 2026", desc: "PAGO QR MERCADO", monto: "-$ 6.000", cents: ",00", ingreso: false },
+  { fecha: "09 JUL 2026", desc: "TRANSFERENCIA AHORROS", monto: "+$ 10.000", cents: ",00", ingreso: true },
+  { fecha: "08 JUL 2026", desc: "RECARGA CELULAR", monto: "-$ 5.000", cents: ",00", ingreso: false },
+  { fecha: "08 JUL 2026", desc: "ABONO CUENTA", monto: "+$ 15.000", cents: ",00", ingreso: true },
+  { fecha: "07 JUL 2026", desc: "PAGO QR PANADERIA", monto: "-$ 8.000", cents: ",00", ingreso: false },
+  { fecha: "07 JUL 2026", desc: "TRANSFERENCIA NEQUI", monto: "+$ 10.000", cents: ",00", ingreso: true },
+  { fecha: "06 JUL 2026", desc: "COMPRA TIENDA", monto: "-$ 5.500", cents: ",00", ingreso: false },
+  { fecha: "06 JUL 2026", desc: "DEVOLUCION COMPRA", monto: "+$ 10.000", cents: ",00", ingreso: true },
+  { fecha: "05 JUL 2026", desc: "PAGO QR CAFETERIA", monto: "-$ 9.000", cents: ",00", ingreso: false },
 ]
 
 export function ScreenCuenta({ onBack }: { onBack: () => void }) {
