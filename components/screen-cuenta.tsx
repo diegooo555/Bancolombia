@@ -8,29 +8,34 @@ import { BancolombiaMark } from "./bancolombia-logo"
 const tabs = ["Detalles", "Movimientos", "Plan"]
 
 const movimientos = [
-  { fecha: "23 JUL 2026", desc: "TRANSFERENCIA CTA SUC VIRTUAL", monto: "-$ 1.143.200", cents: ",00", ingreso: false },
-  { fecha: "22 JUL 2026", desc: "RETIRO SUCURSAL", monto: "-$ 451.000", cents: ",00", ingreso: false },
-  { fecha: "22 JUL 2026", desc: "IMPTO GOBIERNO 4x1000", monto: "-$ 1922", cents: ",00", ingreso: false },
-  { fecha: "21 JUL 2026", desc: "TRANSFERENCIA CTA SUC VIRTUAL", monto: "-$ 525.000", cents: ",00", ingreso: false },
-  { fecha: "21 JUL 2026", desc: "GOOGLE ONE", monto: "-$ 11.000", cents: ",00", ingreso: false },
-  { fecha: "21 JUL 2026", desc: "PAGO DE PROV SABANALAC SAS", monto: "+$ 68.783", cents: ",00", ingreso: true },
-  { fecha: "21 JUL 2026", desc: "PAGO DE PROV SABANALAC SAS", monto: "+$ 2.604.480", cents: ",73", ingreso: true },
-  { fecha: "15 JUL 2026", desc: "TRANSF A COMUNICACION CELULA", monto: "-$ 35.601", cents: ",00" },
-  { fecha: "15 JUL 2026", desc: "PAGO QR PYU CORREDOR", monto: "-$ 50.000", cents: ",00" },
-  { fecha: "12 JUL 2026", desc: "TRANSFERENCIA NEQUI", monto: "+$ 18.000", cents: ",00", ingreso: true },
-  { fecha: "11 JUL 2026", desc: "PAGO QR TIENDA", monto: "-$ 5.000", cents: ",00", ingreso: false },
-  { fecha: "11 JUL 2026", desc: "TRANSFERENCIA NEQUI", monto: "+$ 10.000", cents: ",00", ingreso: true },
-  { fecha: "10 JUL 2026", desc: "COMPRA CAFETERIA", monto: "-$ 7.500", cents: ",00", ingreso: false },
-  { fecha: "10 JUL 2026", desc: "DEVOLUCION PSE", monto: "+$ 12.000", cents: ",00", ingreso: true },
-  { fecha: "09 JUL 2026", desc: "PAGO QR MERCADO", monto: "-$ 6.000", cents: ",00", ingreso: false },
-  { fecha: "09 JUL 2026", desc: "TRANSFERENCIA AHORROS", monto: "+$ 10.000", cents: ",00", ingreso: true },
-  { fecha: "08 JUL 2026", desc: "RECARGA CELULAR", monto: "-$ 5.000", cents: ",00", ingreso: false },
-  { fecha: "08 JUL 2026", desc: "ABONO CUENTA", monto: "+$ 15.000", cents: ",00", ingreso: true },
-  { fecha: "07 JUL 2026", desc: "PAGO QR PANADERIA", monto: "-$ 8.000", cents: ",00", ingreso: false },
-  { fecha: "07 JUL 2026", desc: "TRANSFERENCIA NEQUI", monto: "+$ 10.000", cents: ",00", ingreso: true },
-  { fecha: "06 JUL 2026", desc: "COMPRA TIENDA", monto: "-$ 5.500", cents: ",00", ingreso: false },
-  { fecha: "06 JUL 2026", desc: "DEVOLUCION COMPRA", monto: "+$ 10.000", cents: ",00", ingreso: true },
-  { fecha: "05 JUL 2026", desc: "PAGO QR CAFETERIA", monto: "-$ 9.000", cents: ",00", ingreso: false },
+
+  { fecha: "10 SEP 2026", desc: "PAGO ALIEXPRESS", monto: "-$ 15.000", cents: ",00", ingreso: false },
+
+  { fecha: "10 SEP 2026", desc: "TRANSFERENCIA NEQUI", monto: "-$ 60.000", cents: ",00", ingreso: false },
+
+  { fecha: "10 SEP2026", desc: "TRANSFERENCIA NEQUI", monto: "-$ 78.000", cents: ",00", ingreso: false },
+
+  { fecha: "10 SEP 2026", desc: "TRANSFERENCIA NEQUI", monto: "-$ 3.500", cents: ",00", ingreso: false },
+
+  { fecha: "10 SEP 2026", desc: "TRANSFERENCIA NEQUI", monto: "-$ 37.500", cents: ",00", ingreso: false },
+
+  { fecha: "10 SEP 2026", desc: "TRANSFERENCIA NEQUI", monto: "-$ 40.000", cents: ",00", ingreso: false },
+
+  { fecha: "09 SEP 2026", desc: "TRANSFERENCIA CTA SUC VIRTUAL", monto: "-$ 30.000", cents: ",00", ingreso: false },
+
+  { fecha: "09 SEP 2026", desc: "TRANSFERENCIA NEQUI", monto: "-$ 4.000", cents: ",00", ingreso: false },
+
+  { fecha: "08 SEP 2026", desc: "IMPTO 4x1000", monto: "-$ 6.800", cents: ",00", ingreso: false },
+
+  { fecha: "08 SEP 2026", desc: "TRANSFERENCIA CTA SUC VIRTUAL", monto: "-$ 1.700.000", cents: ",00", ingreso: false },
+
+  { fecha: "08 SEP2026", desc: "TRANSFERENCIA NEQUI", monto: "-$ 100.000", cents: ",00", ingreso: false },
+
+  { fecha: "08 SEP 2026", desc: "PAGO AMAZON", monto: "-$ 198.000", cents: ",00", ingreso: false },
+
+  { fecha: "07 SEP 2026", desc: "PAGO DE PROV SABANALAC SAS", monto: "+$ 3.037.000", cents: ",00", ingreso: true },
+
+
 ]
 
 export function ScreenCuenta({ onBack }: { onBack: () => void }) {
@@ -63,7 +68,7 @@ export function ScreenCuenta({ onBack }: { onBack: () => void }) {
             <div className="text-right">
               <p className="text-muted-foreground">Saldo disponible</p>
               <p className="text-3xl font-light text-foreground">
-                $ 543.063<span className="text-xl">,73</span>
+                $ 804.302<span className="text-xl">,53</span>
               </p>
             </div>
           </div>
@@ -124,7 +129,7 @@ export function ScreenCuenta({ onBack }: { onBack: () => void }) {
             <Detail label="Número de cuenta" value="912 - 846779 - 57" />
             <Detail label="Titular" value="Maradona" />
             <Detail label="Estado" value="Activa" />
-            <Detail label="Saldo total" value="$ 543.063,73" />
+            <Detail label="Saldo total" value="$ 804.302,53" />
           </div>
         )}
 
